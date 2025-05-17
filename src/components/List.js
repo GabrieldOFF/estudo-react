@@ -3,9 +3,9 @@ import Item from "./Item";
 function List(){
 
     const carros = [
-        {id: 1, marca: "Ferrari"},
-        {id: 2, marca: "Fiat"},
-        {id: 3, marca: "Ford"},
+        {marca: "Ferrari", ano_lancamento: 2019},
+        {marca: "Fiat", ano_lancamento: 2018},
+        {marca: "Ford", ano_lancamento: 2020},
 
     ]
     return(
@@ -13,7 +13,7 @@ function List(){
             <h1>Minha Lista</h1>
             <ul>
                 {carros.map((carro) => (
-                    <Item marca={carro.marca}/>
+                    <Item marca={carro.marca} ano_lancamento={carro.ano_lancamento}/>
                 ))}
             </ul>
         </>
